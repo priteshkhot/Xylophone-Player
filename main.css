@@ -1,0 +1,102 @@
+
+body {
+    height: 100vh;
+}
+
+.navbar {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3vh;
+}
+
+.dark {
+    background-color: black;
+}
+
+.light {
+    background-color: beige;
+}
+
+.xyloall {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    justify-content: center;  /* vertical centering */
+    align-items: center;      /* horizontal centering */
+    position: relative;     
+    /* allows postioning overlapping elements front and back */
+}
+
+.xylophonekeys {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+    z-index: 3; 
+    /* highest meaning it would be at front */
+}
+
+hr {
+    height: 2vh;
+    width: 110vh;
+    background-color:beige;
+    z-index: 1;
+    /* low meaning it would be sent to back */
+}
+
+.modeselect button {
+    height: 30px;
+    width: 50px;
+}
+
+#key1 {
+    height: 40vh;
+    width: 10vh;
+    background-color: blue;
+}
+
+#key2 {
+    height: 37vh;
+    width: 10vh;
+    background-color: greenyellow;
+}
+
+#key3 {
+    height: 34vh;
+    width: 10vh;
+    background-color: yellow;
+}
+
+#key4 {
+    height: 31vh;
+    width: 10vh;
+    background-color: orange;
+}
+
+#key5 {
+    height: 28vh;
+    width: 10vh;
+    background-color: red;
+}
+
+#key6 {
+    height: 25vh;
+    width: 10vh;
+    background-color: purple;
+}
+
+#key7 {
+    height: 22vh;
+    width: 10vh;
+    background-color: white;
+}
+
+#key8 {
+    height: 19vh;
+    width: 10vh;
+    background-color: blue;
+}
