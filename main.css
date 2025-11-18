@@ -19,6 +19,23 @@ body {
     background-color: beige;
 }
 
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+}
+
+button {
+    border-radius: 7px;
+    -webkit-tap-highlight-color: transparent; /* removes tap flash */
+    outline: none;
+    border: none;
+}
+
+button:active {
+    transform: none;          /* removes press shrink */
+    background-color: inherit; /* removes pressed color change */
+    box-shadow: none;          /* removes shadow change */
+}
+
 .xyloall {
     height: 80vh;
     display: flex;
