@@ -1,26 +1,47 @@
-
 body {
-    height: 100vh;
+    height: 97vh;
+    margin: 0;
 }
 
 .navbar {
-    height: 10vh;
+    height: 60px;
+    width: inherit;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 3vh;
+    background: rgb(24, 24, 24);
+}
+
+.navbar p {
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 2vw;
+}
+
+.modeselect>button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+
+.modeselect button:hover {
+    filter: brightness(0.8);
+}
+
+.modeselect button:active {
+    filter: brightness(0.5);
 }
 
 .dark {
-    background-color: black;
+    background-color: rgb(32, 32, 32);
 }
 
 .light {
     background-color: beige;
-}
-
-.pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
 }
 
 button {
@@ -32,8 +53,10 @@ button {
 
 button:active {
     transform: none;          /* removes press shrink */
-    background-color: inherit; /* removes pressed color change */
+    /* background-color: inherit; removes pressed color change */
     box-shadow: none;          /* removes shadow change */
+    filter: brightness(0.8);
+    box-shadow: 0 3px 4px 0 #DBEDF3;
 }
 
 .xyloall {
@@ -48,7 +71,7 @@ button:active {
 
 .xylophonekeys {
     height: 5vh;
-    width: 100vw;
+    width: 98vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,60 +83,67 @@ button:active {
 hr {
     height: 2vh;
     width: 110vh;
-    background-color:beige;
+    background-color:rgb(112, 112, 112);
     z-index: 1;
     /* low meaning it would be sent to back */
+    outline: none;
+    border: none;
 }
 
-.modeselect button {
-    height: 30px;
-    width: 50px;
+.keys {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.keys p {
+    background: whitesmoke;
+    border-radius: 10px ;
+    width: 30px;
 }
 
 #key1 {
     height: 40vh;
-    width: 10vh;
-    background-color: blue;
+    background-color: dodgerblue;
 }
 
 #key2 {
     height: 37vh;
-    width: 10vh;
     background-color: greenyellow;
 }
 
 #key3 {
     height: 34vh;
-    width: 10vh;
     background-color: yellow;
 }
 
 #key4 {
     height: 31vh;
-    width: 10vh;
     background-color: orange;
 }
 
 #key5 {
     height: 28vh;
-    width: 10vh;
     background-color: red;
 }
 
 #key6 {
     height: 25vh;
-    width: 10vh;
     background-color: purple;
 }
 
 #key7 {
     height: 22vh;
-    width: 10vh;
     background-color: white;
 }
 
 #key8 {
     height: 19vh;
-    width: 10vh;
-    background-color: blue;
+    background-color: dodgerblue;
 }
