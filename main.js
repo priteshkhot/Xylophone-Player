@@ -1,36 +1,41 @@
-// Playing Keys
-// key1 = document.querySelector("#key1")
-// key2 = document.querySelector("#key2")
-// key3 = document.querySelector("#key3")
-// key4 = document.querySelector("#key4")
-// key5 = document.querySelector("#key5")
-// key6 = document.querySelector("#key6")
-// key7 = document.querySelector("#key7")
-// key8 = document.querySelector("#key8")
+const keys = document.querySelectorAll(".keys"); // makes a list of all 8 keys
+const about = document.querySelector(".about"); // About button to give info aabout which keys to press
 
-const keys = document.querySelectorAll(".keys")
+const numKeys = keys.length;
+const infoKeys = ["A", "S", "D", "F", "J", "K", "L", ";"]; // Keys that can be pressed
+var aboutFlag = false; // Will use this to to check if keys are displayed
 
+// just for testing
 function selectKey() {
-    var keyname = this.getAttribute("id")
-    console.log(keyname)
+    var keyname = this.getAttribute("id");
+    console.log(keyname);
 }
 
-function playKey() {
-    var keyname = this.getAttribute("id")
-    var filename = "audio/" + keyname + "_.mp3";
-    var audio = new Audio(filename);
-    audio.play()
-};
-
-// for each works like a for loopasdfjsal;
+// for each works like a for loop;
 keys.forEach(key => {
     key.addEventListener("click", function(event) {
-        var keyname = event.target.getAttribute("id")
+        var keyname = event.target.getAttribute("id") // I have named the audio files the same as their id
         var filename = "audio/" + keyname + "_.mp3";
         var audio = new Audio(filename);
         audio.play()
     })
 });
+
+about.addEventListener("click", () => {
+    if (aboutFlag == false) {
+        for (let i = 0; i < numKeys; i++) {
+        keys[i].innerHTML = "<p>" + infoKeys[i] + "</p>"
+        // adding the key in paragraph element so I can highlight it
+        }
+        aboutFlag = true;
+    } else {
+        for (let i = 0; i < numKeys; i++) {
+        keys[i].innerHTML = ""
+        }
+        aboutFlag = false;
+    }
+    
+})
 
 document.addEventListener("keydown", function (event) {
     makeSound(event.key)
