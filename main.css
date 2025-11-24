@@ -1,24 +1,34 @@
+
 body {
     height: 97vh;
     margin: 0;
 }
 
+/* no about button on phones */
+@media (max-width: 767px) {
+    .about {
+        display: none !important; 
+    }
+}
+
+/* Navigation bar/Buttons bar */
 .navbar {
     height: 60px;
     width: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3vh;
     background: rgb(24, 24, 24);
 }
 
+/* the 'Xylophone' text on Navbar */
 .navbar p {
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
     margin-left: 2vw;
 }
 
+/* All the buttons */
 .modeselect>button {
     display: inline-flex;
     align-items: center;
@@ -26,16 +36,29 @@ body {
     height: 40px;
     width: 40px;
     border-radius: 50px;
+    transition: transform 0.3s;
 }
 
 .modeselect button:hover {
     filter: brightness(0.8);
+    transform: scale(1.08);
 }
 
 .modeselect button:active {
     filter: brightness(0.5);
 }
 
+/* dark mode/light mode BUTTONS */
+#darkmode {
+    display: none;
+    margin-right: 15px;
+}
+
+#lightmode {
+    margin-right: 15px;
+}
+
+/* dark mode/light mode */
 .dark {
     background-color: rgb(32, 32, 32);
 }
@@ -44,6 +67,8 @@ body {
     background-color: beige;
 }
 
+/* for all buttons (including xylophone keys) */
+/* removes whatever stupid inbuilt things <button> tag does */
 button {
     border-radius: 7px;
     -webkit-tap-highlight-color: transparent; /* removes tap flash */
@@ -51,7 +76,8 @@ button {
     border: none;
 }
 
-button:active {
+button:active,
+.active {
     transform: none;          /* removes press shrink */
     /* background-color: inherit; removes pressed color change */
     box-shadow: none;          /* removes shadow change */
@@ -59,6 +85,7 @@ button:active {
     box-shadow: 0 3px 4px 0 #DBEDF3;
 }
 
+/* Xylophone main */
 .xyloall {
     height: 80vh;
     display: flex;
@@ -75,14 +102,15 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3vh;
+    gap: 2vw;
     z-index: 3; 
     /* highest meaning it would be at front */
 }
 
 hr {
     height: 2vh;
-    width: 110vh;
+    width: calc(calc(8 * 75px) + calc(7 * 2vw));
+    max-width: 98.5vw;
     background-color:rgb(112, 112, 112);
     z-index: 1;
     /* low meaning it would be sent to back */
@@ -95,11 +123,15 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 10vh;
+    width: 70px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bolder;
     font-style: oblique;
+}
+
+.add-border {
+    border: 2px solid rgb(48, 48, 48);
 }
 
 .keys p {
