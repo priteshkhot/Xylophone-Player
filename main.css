@@ -142,40 +142,48 @@ hr {
 
 #key1 {
     height: 40vh;
+    min-height: 200px;
     background-color: dodgerblue;
 }
 
 #key2 {
     height: 37vh;
+    min-height: 185px;
     background-color: greenyellow;
 }
 
 #key3 {
     height: 34vh;
+    min-height: 170px;
     background-color: yellow;
 }
 
 #key4 {
     height: 31vh;
+    min-height: 155px;
     background-color: orange;
 }
 
 #key5 {
     height: 28vh;
+    min-height: 140px;
     background-color: red;
 }
 
 #key6 {
     height: 25vh;
+    min-height: 125px;
     background-color: purple;
 }
 
 #key7 {
     height: 22vh;
+    min-height: 110px;
     background-color: white;
 }
 
 #key8 {
     height: 19vh;
+    min-height: 95px;
     background-color: dodgerblue;
 }
